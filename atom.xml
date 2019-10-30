@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://weiminghao.github.io</id>
     <title>潘潘家的小站</title>
-    <updated>2019-10-30T08:41:56.754Z</updated>
+    <updated>2019-10-30T08:55:58.929Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://weiminghao.github.io"/>
     <link rel="self" href="https://weiminghao.github.io/atom.xml"/>
@@ -25,56 +25,7 @@ window.name 传输技术，原本是 Thomas Frank 用于解决 cookie 的一�
 <p>我们可以在源页面中利用iframe标签嵌套要请求的目标页面，在目标页面设置window.name属性，即把要请求的信息赋给window.name。但是问题来了，两个页面处于不同域，源页面并不能获得目标页面的name值，因为name值只对位于同一域中的页面是可见的。此时，我们需要将iframe导航回与源页面处于同一域中air.html页面（即一个空页面，在这里充当一个中转的角色），上面说了这时候的name值依旧保持不变，那么我们就可以获取到它了。</p>
 <p>示例代码：</p>
 <p>http://www.a.com/origin.html如下</p>
-<code id="code" class="xml">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script>
-		function getData ( url, fn ) {
-			var oIframe = document.createElement('iframe'),
-				firstBtn = true,
-				loadFn = function () {
-					if ( firstBtn ) {
-						//导航回同一域下的air.html，以便获取到name值
-						oIframe.contentWindow.location = 'http://www.a.com/air.html';
-						firstBtn = false;
-					} else {
-						fn( oIframe.contentWindow.name );
-						oIframe.contentWindow.document.write('');
-						oIframe.contentWindow.close();
-						document.body.removeChild(oIframe);
-						oIframe.src = '';
-						oIframe = null;
-					}
-				};
-<pre><code>		oIframe.src = url;
-
-		//1.第一次iframe加载完毕触发事件，执行loadFn函数，会将iframe导航回air.html
-		//2.air.html加载完毕后又会触发事件，再次执行loadFn函数，此时会走else
-		if ( oIframe.attachEvent ) {
-			oIframe.attachEvent( 'onload', loadFn );
-		} else {
-			oIframe.onload = loadFn;
-		}
-
-		document.body.appendChild(oIframe);
-	}
-
-
-	//页面加载完毕后调用getData函数去获取数据
-	window.onload = function () {
-		getData( 'http://www.b.com/target.html', function ( data ) {
-			console.log( data );
-		} );
-	}
-&lt;/script&gt;
-</code></pre>
-</head>
-<body>
-</body>
-</html>
+<code>
 </code>]]></content>
     </entry>
     <entry>
