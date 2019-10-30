@@ -1,22 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://weiminghao.github.io</id>
-    <title>潘潘家的小站</title>
-    <updated>2019-10-30T09:28:27.158Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://weiminghao.github.io"/>
-    <link rel="self" href="https://weiminghao.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://weiminghao.github.io/images/avatar.png</logo>
-    <icon>https://weiminghao.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 潘潘家的小站</rights>
-    <entry>
-        <title type="html"><![CDATA[SpringBoot+Druid配置动态多数据源（注解切换）]]></title>
-        <id>https://weiminghao.github.io/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan</id>
-        <link href="https://weiminghao.github.io/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan">
-        </link>
-        <updated>2019-10-30T09:26:49.000Z</updated>
-        <content type="html"><![CDATA[<p>yml配置文件:</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>SpringBoot+Druid配置动态多数据源（注解切换） | 潘潘家的小站</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://weiminghao.github.io/favicon.ico?v=1572427688054">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://weiminghao.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://weiminghao.github.io">
+        <img src="https://weiminghao.github.io/images/avatar.png?v=1572427688054" class="site-logo">
+        <h1 class="site-title">潘潘家的小站</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by wmh | <a class="rss" href="https://weiminghao.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">SpringBoot+Druid配置动态多数据源（注解切换）</h2>
+            <div class="post-date">2019-10-30</div>
+            
+            <div class="post-content">
+              <p>yml配置文件:</p>
 <pre><code>spring:
   datasource:
     druid:
@@ -243,113 +329,92 @@ public class DataSourceAspect implements Ordered {
 </code></pre>
 <p>测试:成功返回另一个数据库中的内容。<br>
 <img src="https://weiminghao.github.io/post-images/1572427650079.png" alt=""></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[前端跨域解决方法之window.name+iframe]]></title>
-        <id>https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe</id>
-        <link href="https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe">
-        </link>
-        <updated>2019-10-30T08:05:37.000Z</updated>
-        <content type="html"><![CDATA[<p>window.name 传输技术，原本是 Thomas Frank 用于解决 cookie 的一些劣势（每个域名 4 x 20 Kb 的限制、数据只能是字符串、设置和获取 cookie 语法的复杂等等）而发明的（详细见原文：《Session variables without cookies》），后来 Kris Zyp 在此方法的基础上强化了 window.name 传输 ，并引入到了 Dojo （dojox.io.windowName），用来解决跨域数据传输问题。</p>
-<p>首先，我们要知道关于window.name的这样一个特性：name 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。换句话说，name属性不会因为页面的url变化而变化，这就给跨域提供了机会。</p>
-<p>我们可以在源页面中利用iframe标签嵌套要请求的目标页面，在目标页面设置window.name属性，即把要请求的信息赋给window.name。但是问题来了，两个页面处于不同域，源页面并不能获得目标页面的name值，因为name值只对位于同一域中的页面是可见的。此时，我们需要将iframe导航回与源页面处于同一域中air.html页面（即一个空页面，在这里充当一个中转的角色），上面说了这时候的name值依旧保持不变，那么我们就可以获取到它了。</p>
-<p>http://www.a.com/origin.html 如下</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-	&lt;title&gt;Document&lt;/title&gt;
-	&lt;script&gt;
-		function getData ( url, fn ) {
-			var oIframe = document.createElement('iframe'),
-				firstBtn = true,
-				loadFn = function () {
-					if ( firstBtn ) {
-						//导航回同一域下的air.html，以便获取到name值
-						oIframe.contentWindow.location = 'http://www.a.com/air.html';
-						firstBtn = false;
-					} else {
-						fn( oIframe.contentWindow.name );
-						oIframe.contentWindow.document.write('');
-						oIframe.contentWindow.close();
-						document.body.removeChild(oIframe);
-						oIframe.src = '';
-						oIframe = null;
-					}
-				};
- 
-			oIframe.src = url;
- 
-			//1.第一次iframe加载完毕触发事件，执行loadFn函数，会将iframe导航回air.html
-			//2.air.html加载完毕后又会触发事件，再次执行loadFn函数，此时会走else
-			if ( oIframe.attachEvent ) {
-				oIframe.attachEvent( 'onload', loadFn );
-			} else {
-				oIframe.onload = loadFn;
-			}
- 
-			document.body.appendChild(oIframe);
-		}
- 
- 
-		//页面加载完毕后调用getData函数去获取数据
-		window.onload = function () {
-			getData( 'http://www.b.com/target.html', function ( data ) {
-				console.log( data );
-			} );
-		}
-	&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>http://www.b.com/target.html如下：</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-	&lt;meta charset=&quot;UTF-8&quot;&gt;
-	&lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;script&gt;
-		window.name = '想要获取的信息';
-	&lt;/script&gt;
-&lt;/body&gt;
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea 一个静态博客写作客户端]]></title>
-        <id>https://weiminghao.github.io/post/hello-gridea</id>
-        <link href="https://weiminghao.github.io/post/hello-gridea">
-        </link>
-        <updated>2019-10-30T01:25:06.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://weiminghao.github.io/tag/z0D4qS9-N" class="tag">
+                    java
+                  </a>
+                
+                  <a href="https://weiminghao.github.io/tag/h9GwEjYvgL" class="tag">
+                    注解
+                  </a>
+                
+                  <a href="https://weiminghao.github.io/tag/b1D_piZ0FT" class="tag">
+                    多数据源
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe">
+                  <h3 class="post-title">
+                    前端跨域解决方法之window.name+iframe
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b1388d9603e1a27962b3',
+        clientSecret: '54c8d29cd36a968ebac5fddf7bdb9326883ef0b2',
+        repo: 'weiminghao.github.io',
+        owner: 'weiminghao',
+        admin: ['weiminghao'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
