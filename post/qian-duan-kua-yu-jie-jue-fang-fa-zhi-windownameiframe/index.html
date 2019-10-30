@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://weiminghao.github.io/favicon.ico?v=1572423162986">
+<link rel="shortcut icon" href="https://weiminghao.github.io/favicon.ico?v=1572423607068">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://weiminghao.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://weiminghao.github.io">
-        <img src="https://weiminghao.github.io/images/avatar.png?v=1572423162986" class="site-logo">
+        <img src="https://weiminghao.github.io/images/avatar.png?v=1572423607068" class="site-logo">
         <h1 class="site-title">潘潘家的小站</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -102,85 +102,119 @@
             <div class="post-date">2019-10-30</div>
             
             <div class="post-content">
-              <article class="baidu_pl">
-<p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;">window.name 传输技术，原本是 </span><a href="http://www.thomasfrank.se/about.html" rel="nofollow" title="About Thomas Frank" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="cb037572040ef91b7bf4d84be8393ddd">Thomas
- Frank</a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;"> 用于解决 cookie 的一些劣势（每个域名 4 x 20 Kb 的限制、数据只能是字符串、设置和获取 cookie 语法的复杂等等）而发明的（详细见原文：</span><a href="http://www.thomasfrank.se/sessionvars.html" rel="nofollow" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="8604697bd8a3af46a1138eac9e7dcdc0">《Session
- variables without cookies》</a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">），后来 </span><a href="http://www.sitepen.com/blog/2008/07/22/windowname-transport/" rel="nofollow" title="window.name Transport" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="47a0e5b8e2f753995b05bceaf57ab907">Kris
- Zyp</a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;"> 在此方法的基础上强化了 window.name 传输 ，并引入到了 </span><a href="http://dojotoolkit.org/" rel="nofollow" title="Dojo" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="2ce04dfb507a06b2509f8bc1d2ce265f">Dojo </a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">（</span><a href="http://bugs.dojotoolkit.org/ticket/6893" rel="nofollow" title="dojox.io.windowName" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="b0e88a5ac26577c6d0be55e93167dbc9">dojox.io.windowName</a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">），用来解决跨域数据传输问题。</span></p>
-<p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">首先，我们要知道关于window.name的这样一个特性：<span style="font-size:14.4px;line-height:23.04px;text-indent:28.8px;"><em>name
- 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。</em>换句话说，name属性不会因为页面的url变化而变化，这就给跨域提供了机会。</span></span></p>
-<p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;"><br /></span></p>
-<p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">我们可以在源页面中利用iframe标签嵌套要请求的目标页面，在目标页面设置window.name属性，即把要请求的信息赋给window.name。但是问题来了，两个页面处于不同域，源页面并不能获得目标页面的name值，因为name值只对位于同一域中的页面是可见的。此时，我们需要将iframe导航回与源页面处于同一域中air.html页面（即一个空页面，在这里充当一个中转的角色），上面说了这时候的name值依旧保持不变，那么我们就可以获取到它了。</span></p>
-<p><br /></p>
-<p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">示例代码：</span></p>
-<p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">http://www.a.com/origin.html如下</span></p>
-<p></p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+              <p>
+    window.name 传输技术，原本是 Thomas Frank 用于解决 cookie 的一些劣势（每个域名 4 x 20 Kb 的限制、数据只能是字符串、设置和获取 cookie 语法的复杂等等）而发明的（详细见原文：《Session variables without cookies》），后来 Kris Zyp 在此方法的基础上强化了 window.name 传输 ，并引入到了 Dojo （dojox.io.windowName），用来解决跨域数据传输问题。
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    首先，我们要知道关于window.name的这样一个特性：name 值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。换句话说，name属性不会因为页面的url变化而变化，这就给跨域提供了机会。
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    我们可以在源页面中利用iframe标签嵌套要请求的目标页面，在目标页面设置window.name属性，即把要请求的信息赋给window.name。但是问题来了，两个页面处于不同域，源页面并不能获得目标页面的name值，因为name值只对位于同一域中的页面是可见的。此时，我们需要将iframe导航回与源页面处于同一域中air.html页面（即一个空页面，在这里充当一个中转的角色），上面说了这时候的name值依旧保持不变，那么我们就可以获取到它了。
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    示例代码：
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    http://www.a.com/origin.html如下
+</p>
+<pre class="brush:html;toolbar:false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
 &lt;head&gt;
-	&lt;meta charset="UTF-8"&gt;
-	&lt;title&gt;Document&lt;/title&gt;
-	&lt;script&gt;
-		function getData ( url, fn ) {
-			var oIframe = document.createElement('iframe'),
-				firstBtn = true,
-				loadFn = function () {
-					if ( firstBtn ) {
-						//导航回同一域下的air.html，以便获取到name值
-						oIframe.contentWindow.location = 'http://www.a.com/air.html';
-						firstBtn = false;
-					} else {
-						fn( oIframe.contentWindow.name );
-						oIframe.contentWindow.document.write('');
-						oIframe.contentWindow.close();
-						document.body.removeChild(oIframe);
-						oIframe.src = '';
-						oIframe = null;
-					}
-				};
-<pre><code>		oIframe.src = url;
-
-		//1.第一次iframe加载完毕触发事件，执行loadFn函数，会将iframe导航回air.html
-		//2.air.html加载完毕后又会触发事件，再次执行loadFn函数，此时会走else
-		if ( oIframe.attachEvent ) {
-			oIframe.attachEvent( 'onload', loadFn );
-		} else {
-			oIframe.onload = loadFn;
-		}
-
-		document.body.appendChild(oIframe);
-	}
-
-
-	//页面加载完毕后调用getData函数去获取数据
-	window.onload = function () {
-		getData( 'http://www.b.com/target.html', function ( data ) {
-			console.log( data );
-		} );
-	}
-&amp;lt;/script&amp;gt;
-</code></pre>
-<p>&lt;/head&gt;<br>
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;script&gt;
+function getData ( url, fn ) {
+var oIframe = document.createElement(&#39;iframe&#39;),
+firstBtn = true,
+loadFn = function () {
+if ( firstBtn ) {
+//导航回同一域下的air.html，以便获取到name值
+oIframe.contentWindow.location = &#39;http://www.a.com/air.html&#39;;
+firstBtn = false;
+} else {
+fn( oIframe.contentWindow.name );
+oIframe.contentWindow.document.write(&#39;&#39;);
+oIframe.contentWindow.close();
+document.body.removeChild(oIframe);
+oIframe.src = &#39;&#39;;
+oIframe = null;
+}
+};
+<p>oIframe.src = url;</p>
+<p>//1.第一次iframe加载完毕触发事件，执行loadFn函数，会将iframe导航回air.html<br>
+//2.air.html加载完毕后又会触发事件，再次执行loadFn函数，此时会走else<br>
+if ( oIframe.attachEvent ) {<br>
+oIframe.attachEvent( 'onload', loadFn );<br>
+} else {<br>
+oIframe.onload = loadFn;<br>
+}</p>
+<p>document.body.appendChild(oIframe);<br>
+}</p>
+<p>//页面加载完毕后调用getData函数去获取数据<br>
+window.onload = function () {<br>
+getData( 'http://www.b.com/target.html', function ( data ) {<br>
+console.log( data );<br>
+} );<br>
+}<br>
+&lt;/script&gt;<br>
+&lt;/head&gt;<br>
 &lt;body&gt;<br>
 &lt;/body&gt;<br>
-&lt;/html&gt;</code></pre><br /><p>http://www.b.com/target.html如下：</p></p>
-<p></p><pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;/html&gt;</pre></p>
+<p>
+    <br/>
+</p>
+<p>
+    http://www.b.com/target.html如下：
+</p>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
+<pre class="brush:html;toolbar:false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
 &lt;head&gt;
-	&lt;meta charset="UTF-8"&gt;
-	&lt;title&gt;Document&lt;/title&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;script&gt;
-		window.name = '想要获取的信息';
-	&lt;/script&gt;
+&lt;script&gt;
+window.name = &#39;想要获取的信息&#39;;
+&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<p><br /></p>
-<p><br /></p>
-参考文章：<a href="http://www.planabc.net/2008/09/01/window_name_transport/" rel="nofollow" data-token="41c1f56698431d3357a562c3ce01c7b1">使用 window.name 解决跨域问题</a><br /><br />                                    </div>
-                    </div>
-    </article>
+&lt;/html&gt;</pre>
+<p>
+    <br/>
+</p>
+<p>
+    <br/>
+</p>
             </div>
             
               <div class="tag-container">
