@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://weiminghao.github.io</id>
     <title>潘潘家的小站</title>
-    <updated>2019-10-30T09:11:45.436Z</updated>
+    <updated>2019-10-30T09:13:34.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://weiminghao.github.io"/>
     <link rel="self" href="https://weiminghao.github.io/atom.xml"/>
@@ -69,6 +69,19 @@
 &lt;body&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+</code></pre>
+<p>http://www.b.com/target.html如下：</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;script&gt;
+		window.name = '想要获取的信息';
+	&lt;/script&gt;
+&lt;/body&gt;
 </code></pre>
 ]]></content>
     </entry>
