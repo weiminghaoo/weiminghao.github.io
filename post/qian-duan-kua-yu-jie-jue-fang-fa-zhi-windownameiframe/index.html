@@ -1,22 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://weiminghao.github.io</id>
-    <title>潘潘家的小站</title>
-    <updated>2019-10-30T08:12:45.347Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://weiminghao.github.io"/>
-    <link rel="self" href="https://weiminghao.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://weiminghao.github.io/images/avatar.png</logo>
-    <icon>https://weiminghao.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 潘潘家的小站</rights>
-    <entry>
-        <title type="html"><![CDATA[前端跨域解决方法之window.name+iframe]]></title>
-        <id>https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe</id>
-        <link href="https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe">
-        </link>
-        <updated>2019-10-30T08:05:37.000Z</updated>
-        <content type="html"><![CDATA[<article class="baidu_pl">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>前端跨域解决方法之window.name+iframe | 潘潘家的小站</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://weiminghao.github.io/favicon.ico?v=1572423162986">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://weiminghao.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://weiminghao.github.io">
+        <img src="https://weiminghao.github.io/images/avatar.png?v=1572423162986" class="site-logo">
+        <h1 class="site-title">潘潘家的小站</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by wmh | <a class="rss" href="https://weiminghao.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">前端跨域解决方法之window.name+iframe</h2>
+            <div class="post-date">2019-10-30</div>
+            
+            <div class="post-content">
+              <article class="baidu_pl">
 <p><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;">window.name 传输技术，原本是 </span><a href="http://www.thomasfrank.se/about.html" rel="nofollow" title="About Thomas Frank" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="cb037572040ef91b7bf4d84be8393ddd">Thomas
  Frank</a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;"> 用于解决 cookie 的一些劣势（每个域名 4 x 20 Kb 的限制、数据只能是字符串、设置和获取 cookie 语法的复杂等等）而发明的（详细见原文：</span><a href="http://www.thomasfrank.se/sessionvars.html" rel="nofollow" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="8604697bd8a3af46a1138eac9e7dcdc0">《Session
  variables without cookies》</a><span style="color:rgb(66,74,94);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;">），后来 </span><a href="http://www.sitepen.com/blog/2008/07/22/windowname-transport/" rel="nofollow" title="window.name Transport" style="color:rgb(121,78,173);font-family:Corbel, Verdana, Arial, Helvetica, sans-serif;font-size:14.4px;line-height:23.04px;text-indent:28.8px;" data-token="47a0e5b8e2f753995b05bceaf57ab907">Kris
@@ -94,38 +180,96 @@
 <p><br /></p>
 参考文章：<a href="http://www.planabc.net/2008/09/01/window_name_transport/" rel="nofollow" data-token="41c1f56698431d3357a562c3ce01c7b1">使用 window.name 解决跨域问题</a><br /><br />                                    </div>
                     </div>
-    </article>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea 一个静态博客写作客户端]]></title>
-        <id>https://weiminghao.github.io/post/hello-gridea</id>
-        <link href="https://weiminghao.github.io/post/hello-gridea">
-        </link>
-        <updated>2019-10-30T01:25:06.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
-]]></content>
-    </entry>
-</feed>
+    </article>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://weiminghao.github.io/tag/D2LXN9IoI" class="tag">
+                    html
+                  </a>
+                
+                  <a href="https://weiminghao.github.io/tag/TcPiuurWx5" class="tag">
+                    js
+                  </a>
+                
+                  <a href="https://weiminghao.github.io/tag/3VW-z9iTK-" class="tag">
+                    form
+                  </a>
+                
+                  <a href="https://weiminghao.github.io/tag/07iD9k3Ovj" class="tag">
+                    iframe
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://weiminghao.github.io/post/hello-gridea">
+                  <h3 class="post-title">
+                    Gridea 一个静态博客写作客户端
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b1388d9603e1a27962b3',
+        clientSecret: '54c8d29cd36a968ebac5fddf7bdb9326883ef0b2',
+        repo: 'weiminghao.github.io',
+        owner: 'weiminghao',
+        admin: ['weiminghao'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
