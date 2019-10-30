@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://weiminghao.github.io/favicon.ico?v=1572423607068">
+<link rel="shortcut icon" href="https://weiminghao.github.io/favicon.ico?v=1572423979758">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://weiminghao.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://weiminghao.github.io">
-        <img src="https://weiminghao.github.io/images/avatar.png?v=1572423607068" class="site-logo">
+        <img src="https://weiminghao.github.io/images/avatar.png?v=1572423979758" class="site-logo">
         <h1 class="site-title">潘潘家的小站</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -141,29 +141,32 @@
 <p>
     http://www.a.com/origin.html如下
 </p>
-<pre class="brush:html;toolbar:false">&lt;!DOCTYPE html&gt;
+<pre class="brush:html;toolbar:false">
+<code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
 &lt;title&gt;Document&lt;/title&gt;
 &lt;script&gt;
-function getData ( url, fn ) {
-var oIframe = document.createElement(&#39;iframe&#39;),
-firstBtn = true,
-loadFn = function () {
-if ( firstBtn ) {
-//导航回同一域下的air.html，以便获取到name值
-oIframe.contentWindow.location = &#39;http://www.a.com/air.html&#39;;
-firstBtn = false;
-} else {
-fn( oIframe.contentWindow.name );
-oIframe.contentWindow.document.write(&#39;&#39;);
-oIframe.contentWindow.close();
-document.body.removeChild(oIframe);
-oIframe.src = &#39;&#39;;
-oIframe = null;
-}
-};
+<code class="language-javascript">
+<p>function getData ( url, fn ) {<br>
+var oIframe = document.createElement('iframe'),<br>
+firstBtn = true,<br>
+loadFn = function () {<br>
+if ( firstBtn ) {<br>
+//导航回同一域下的air.html，以便获取到name值<br>
+oIframe.contentWindow.location = 'http://www.a.com/air.html';<br>
+firstBtn = false;<br>
+} else {<br>
+fn( oIframe.contentWindow.name );<br>
+oIframe.contentWindow.document.write('');<br>
+oIframe.contentWindow.close();<br>
+document.body.removeChild(oIframe);<br>
+oIframe.src = '';<br>
+oIframe = null;<br>
+}<br>
+};</p>
 <p>oIframe.src = url;</p>
 <p>//1.第一次iframe加载完毕触发事件，执行loadFn函数，会将iframe导航回air.html<br>
 //2.air.html加载完毕后又会触发事件，再次执行loadFn函数，此时会走else<br>
@@ -180,11 +183,13 @@ getData( 'http://www.b.com/target.html', function ( data ) {<br>
 console.log( data );<br>
 } );<br>
 }<br>
-&lt;/script&gt;<br>
+</code></p>
+<p>&lt;/script&gt;<br>
 &lt;/head&gt;<br>
 &lt;body&gt;<br>
 &lt;/body&gt;<br>
-&lt;/html&gt;</pre></p>
+&lt;/html&gt;</pre><br>
+</code></p>
 <p>
     <br/>
 </p>
@@ -197,7 +202,9 @@ console.log( data );<br>
 <p>
     <br/>
 </p>
-<pre class="brush:html;toolbar:false">&lt;!DOCTYPE html&gt;
+<pre class="brush:html;toolbar:false">
+<code class="language-html">
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -209,12 +216,14 @@ window.name = &#39;想要获取的信息&#39;;
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
+</code>
 <p>
     <br/>
 </p>
 <p>
     <br/>
 </p>
+
             </div>
             
               <div class="tag-container">
