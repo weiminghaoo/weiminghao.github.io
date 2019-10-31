@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://weiminghao.github.io</id>
     <title>潘潘家的小站</title>
-    <updated>2019-10-30T09:29:05.909Z</updated>
+    <updated>2019-10-31T08:37:46.984Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://weiminghao.github.io"/>
     <link rel="self" href="https://weiminghao.github.io/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>https://weiminghao.github.io/images/avatar.png</logo>
     <icon>https://weiminghao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 潘潘家的小站</rights>
+    <entry>
+        <title type="html"><![CDATA[ubuntu deepin-wine安装windows应用]]></title>
+        <id>https://weiminghao.github.io/post/ubuntu-deepin-wine-an-zhuang-windows-ying-yong</id>
+        <link href="https://weiminghao.github.io/post/ubuntu-deepin-wine-an-zhuang-windows-ying-yong">
+        </link>
+        <updated>2019-10-31T08:31:08.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="参考链接">参考链接</h4>
+<p><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" title="deepin-wine-ubuntu">deepin-wine-ubuntu</a><br>
+<a href="https://blog.csdn.net/qq_32767041/article/details/84558068" title="Ubuntu 安装 deepin wine 微信 登录后 有小黑框">Ubuntu 安装 deepin wine 微信 登录后 有小黑框</a></p>
+<h4 id="正文">正文</h4>
+<pre><code># 下载deepin-wine 环境
+git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
+# 切换目录
+cd deepin-wine-for-ubuntu
+    ## 切换到root账户
+    su 
+    ./install.sh
+    # OR
+    ##sudo运行安装
+    sudo ./install.sh
+</code></pre>
+<h4 id="正文-2">正文</h4>
+<pre><code># 下载deepin-wine 环境
+git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
+# 切换目录
+cd deepin-wine-for-ubuntu
+    ## 切换到root账户
+    su 
+    ./install.sh
+    # OR
+    ##sudo运行安装
+    sudo ./install.sh
+</code></pre>
+<h5 id="以下下载链接摘自">以下下载链接摘自</h5>
+<p><strong><a href="https://github.com/wszqkzqk/deepin-wine-ubuntu" target="_blank" rel="nofollow">deepin-wine-ubuntu</a></strong></p></p>
+<ol>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/" target="_blank" rel="nofollow">QQ</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/" target="_blank" rel="nofollow">TIM</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im.light/" target="_blank" rel="nofollow">QQ轻聊版</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/" target="_blank" rel="nofollow">微信</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.foxmail/" target="_blank" rel="nofollow">Foxmail</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.baidu.pan/" target="_blank" rel="nofollow">百度网盘</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.cn.360.yasuo/" target="_blank" rel="nofollow">360压缩</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.cn.com.winrar/" target="_blank" rel="nofollow">WinRAR</a></li>
+<li><a href="http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/" target="_blank" rel="nofollow">迅雷极速版</a></li>
+</ol>
+<pre><code># 安装应用
+## 安装需要超级用户权限
+dpkg -i ***.deb
+## 当然，你也可以双击 然后install
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SpringBoot+Druid配置动态多数据源（注解切换）]]></title>
         <id>https://weiminghao.github.io/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan</id>
