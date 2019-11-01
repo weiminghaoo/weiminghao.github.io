@@ -31,7 +31,7 @@
 
 				dialog = this.createDialog({
 					name       : dialogName,
-					title      : "Html下载",
+					title      : "Html源码",
 					width      : 840,
 					height     : 540,
 					mask       : settings.dialogShowMask,
