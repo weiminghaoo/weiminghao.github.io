@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple example - Editor.md examples</title>
+        <link rel="stylesheet" href="editormd/css/style.css" />
+        <link rel="stylesheet" href="editormd/css/editormd.css" />
+        <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="layout">
+         
+            <div id="test-editormd">
+                <textarea style="display:none;">[TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+
+#### Editor.md directory
+
+    editor.md/
+            lib/
+            css/
+            scss/
+            tests/
+            fonts/
+            images/
+            plugins/
+            examples/
+            languages/     
+            editormd.js
+            ...
+
+```html
+&lt;!-- English --&gt;
+&lt;script src="../dist/js/languages/en.js"&gt;&lt;/script&gt;
+
+&lt;!-- 繁體中文 --&gt;
+&lt;script src="../dist/js/languages/zh-tw.js"&gt;&lt;/script&gt;
+```
+</textarea>
+            </div>
+        </div>
+        <script src="editormd/js/jquery.min.js"></script>
+        <script src="editormd/editormd.min.js"></script>
+        <script type="text/javascript">
+			var testEditor;
+
+            $(function() {
+                $("#test-editormd").removeAttr("class");
+                var md=$("#mdeditor-textarea").text();
+                $("#test-editormd").html("");
+                testEditor =  editormd("test-editormd", {
+                    width: "100%",
+                    height: 740,
+                    path: 'editormd/lib/',
+                    theme: "eclipse",
+                    previewTheme: "eclipse",
+                    editorTheme: "eclipse",
+                    markdown: md,
+                    codeFold: true,
+                    saveHTMLToTextarea: true,    // 淇濆瓨 HTML 鍒� Textarea
+                    searchReplace: true,
+                    htmlDecode: "style,script,iframe|on*",            // 寮€鍚� HTML 鏍囩瑙ｆ瀽锛屼负浜嗗畨鍏ㄦ€э紝榛樿涓嶅紑鍚�
+                    emoji: true,
+                    taskList: true,
+                    tocm: true,         // Using [TOCM]
+                    tex: true,                   // 寮€鍚瀛﹀叕寮廡eX璇█鏀寔锛岄粯璁ゅ叧闂�
+                    flowChart: true,             // 寮€鍚祦绋嬪浘鏀寔锛岄粯璁ゅ叧闂�
+                    sequenceDiagram: true,       // 寮€鍚椂搴�/搴忓垪鍥炬敮鎸侊紝榛樿鍏抽棴,
+                    onload: function () {
+                        this.fullscreen();
+                    },
+                    toolbarIcons : function() {
+                        // Or return editormd.toolbarModes[name]; // full, simple, mini
+                        // Using "||" set icons align right.
+                        var toolBarIconArray=editormd.toolbarModes["full"];
+                        toolBarIconArray.push("download");
+                        return toolBarIconArray;
+                    },
+                    toolbarIconsClass : {
+                        download : "fa-download"  // 鎸囧畾涓€涓狥ontAawsome鐨勫浘鏍囩被
+                    },
+                    toolbarIconTexts : {
+                        download : "download"  // 濡傛灉娌℃湁鍥炬爣锛屽垯鍙互杩欐牱鐩存帴鎻掑叆鍐呭锛屽彲浠ユ槸瀛楃涓叉垨HTML鏍囩
+                    },
+                    // 鑷畾涔夊伐鍏锋爮鎸夐挳鐨勪簨浠跺鐞�
+                    toolbarHandlers : {
+                        download : function() {
+                            this.executePlugin("downloadDialog", "download-dialog/download-dialog");
+                        }
+                    }
+
+                });
+            });
+        </script>
+    </body>
+</html>
