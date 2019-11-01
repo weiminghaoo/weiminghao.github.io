@@ -27,11 +27,11 @@
 
 			if (editor.find("." + dialogName).length < 1)
 			{			
-				var dialogContent = "<div class=\"markdown-body\" style=\"font-family:寰蒋闆呴粦, Helvetica, Tahoma, STXihei,Arial;height:390px;overflow:auto;font-size:14px;border-bottom:1px solid #ddd;padding:0 20px 20px 0;\"></div>";
+				var dialogContent = "<div class=\"markdown-body\" style=\"font-family: Helvetica, Tahoma, STXihei,Arial;height:390px;overflow:auto;font-size:14px;border-bottom:1px solid #ddd;padding:0 20px 20px 0;\"></div>";
 
 				dialog = this.createDialog({
 					name       : dialogName,
-					title      : "Html婧愮爜",
+					title      : "Html下载",
 					width      : 840,
 					height     : 540,
 					mask       : settings.dialogShowMask,
@@ -67,7 +67,7 @@
                     "<html lang=\"zh\">\n" +
                     "<head>\n" +
                     "    <meta charset=\"utf-8\"/>\n" +
-                    "    <title>Markdown鍦ㄧ嚎缂栬緫鍣� - www.MdEditor.com</title>\n" +
+                    "    <title>Markdown在线编辑器</title>\n" +
                     "    <link rel=\"shortcut icon\" href=\"https://www.mdeditor.com/images/logos/favicon.ico\" type=\"image/x-icon\"/>\n" +
                     "</head>\n" +
                     "<body>";

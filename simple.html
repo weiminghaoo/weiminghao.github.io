@@ -64,15 +64,15 @@
                     editorTheme: "eclipse",
                     markdown: md,
                     codeFold: true,
-                    saveHTMLToTextarea: true,    // 淇濆瓨 HTML 鍒� Textarea
+                    saveHTMLToTextarea: true, 
                     searchReplace: true,
-                    htmlDecode: "style,script,iframe|on*",            // 寮€鍚� HTML 鏍囩瑙ｆ瀽锛屼负浜嗗畨鍏ㄦ€э紝榛樿涓嶅紑鍚�
+                    htmlDecode: "style,script,iframe|on*", 
                     emoji: true,
                     taskList: true,
-                    tocm: true,         // Using [TOCM]
-                    tex: true,                   // 寮€鍚瀛﹀叕寮廡eX璇█鏀寔锛岄粯璁ゅ叧闂�
-                    flowChart: true,             // 寮€鍚祦绋嬪浘鏀寔锛岄粯璁ゅ叧闂�
-                    sequenceDiagram: true,       // 寮€鍚椂搴�/搴忓垪鍥炬敮鎸侊紝榛樿鍏抽棴,
+                    tocm: true,         
+                    tex: true,                  
+                    flowChart: true,            
+                    sequenceDiagram: true,     
                     onload: function () {
                         this.fullscreen();
                     },
@@ -84,12 +84,11 @@
                         return toolBarIconArray;
                     },
                     toolbarIconsClass : {
-                        download : "fa-download"  // 鎸囧畾涓€涓狥ontAawsome鐨勫浘鏍囩被
+                        download : "fa-download"  
                     },
                     toolbarIconTexts : {
-                        download : "download"  // 濡傛灉娌℃湁鍥炬爣锛屽垯鍙互杩欐牱鐩存帴鎻掑叆鍐呭锛屽彲浠ユ槸瀛楃涓叉垨HTML鏍囩
+                        download : "download"  
                     },
-                    // 鑷畾涔夊伐鍏锋爮鎸夐挳鐨勪簨浠跺鐞�
                     toolbarHandlers : {
                         download : function() {
                             this.executePlugin("downloadDialog", "download-dialog/download-dialog");
