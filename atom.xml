@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://weiminghao.github.io</id>
+    <id>http://weiminghao.coding.me</id>
     <title>潘潘家的小站</title>
-    <updated>2019-12-06T14:25:00.546Z</updated>
+    <updated>2019-12-06T16:16:23.275Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://weiminghao.github.io"/>
-    <link rel="self" href="https://weiminghao.github.io/atom.xml"/>
+    <link rel="alternate" href="http://weiminghao.coding.me"/>
+    <link rel="self" href="http://weiminghao.coding.me/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://weiminghao.github.io/images/avatar.png</logo>
-    <icon>https://weiminghao.github.io/favicon.ico</icon>
+    <logo>http://weiminghao.coding.me/images/avatar.png</logo>
+    <icon>http://weiminghao.coding.me/favicon.ico</icon>
     <rights>All rights reserved 2019, 潘潘家的小站</rights>
     <entry>
         <title type="html"><![CDATA[ubuntu deepin-wine安装windows应用]]></title>
-        <id>https://weiminghao.github.io/post/ubuntu-deepin-wine-an-zhuang-windows-ying-yong</id>
-        <link href="https://weiminghao.github.io/post/ubuntu-deepin-wine-an-zhuang-windows-ying-yong">
+        <id>http://weiminghao.coding.me/post/ubuntu-deepin-wine-an-zhuang-windows-ying-yong</id>
+        <link href="http://weiminghao.coding.me/post/ubuntu-deepin-wine-an-zhuang-windows-ying-yong">
         </link>
         <updated>2019-10-31T08:31:08.000Z</updated>
         <content type="html"><![CDATA[<h4 id="参考链接">参考链接</h4>
@@ -65,8 +65,8 @@ dpkg -i ***.deb
     </entry>
     <entry>
         <title type="html"><![CDATA[SpringBoot+Druid配置动态多数据源（注解切换）]]></title>
-        <id>https://weiminghao.github.io/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan</id>
-        <link href="https://weiminghao.github.io/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan">
+        <id>http://weiminghao.coding.me/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan</id>
+        <link href="http://weiminghao.coding.me/post/springbootdruid-pei-zhi-dong-tai-duo-shu-ju-yuan-zhu-jie-qie-huan">
         </link>
         <updated>2019-10-30T09:26:49.000Z</updated>
         <content type="html"><![CDATA[<p>yml配置文件:</p>
@@ -295,13 +295,13 @@ public class DataSourceAspect implements Ordered {
     }
 </code></pre>
 <p>测试:成功返回另一个数据库中的内容。<br>
-<img src="https://weiminghao.github.io/post-images/1572427650079.png" alt=""></p>
+<img src="http://weiminghao.coding.me/post-images/1572427650079.png" alt=""></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[前端跨域解决方法之window.name+iframe]]></title>
-        <id>https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe</id>
-        <link href="https://weiminghao.github.io/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe">
+        <id>http://weiminghao.coding.me/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe</id>
+        <link href="http://weiminghao.coding.me/post/qian-duan-kua-yu-jie-jue-fang-fa-zhi-windownameiframe">
         </link>
         <updated>2019-10-30T08:05:37.000Z</updated>
         <content type="html"><![CDATA[<p>window.name 传输技术，原本是 Thomas Frank 用于解决 cookie 的一些劣势（每个域名 4 x 20 Kb 的限制、数据只能是字符串、设置和获取 cookie 语法的复杂等等）而发明的（详细见原文：《Session variables without cookies》），后来 Kris Zyp 在此方法的基础上强化了 window.name 传输 ，并引入到了 Dojo （dojox.io.windowName），用来解决跨域数据传输问题。</p>
